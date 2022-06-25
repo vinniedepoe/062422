@@ -1,41 +1,33 @@
-import React from 'react'
+import { Component } from 'react'
 import styled from 'styled-components'
 import CrystalBox from '../CrystalBox/CrystalBox'
+import crystalData from '../../res/crystalsdata'
 
 const Grid = styled.div `
 margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: float;
+    clean:both;
     justify-items: center;
-    width: 60vw;
-    background-color: gray;
+    width: 80vw;
+    background-color: rgba(10,10,10,0.7)
 `
 
-const CrystalGrid = () => {
-  return (
-    <div>
-    <Grid>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
-        <CrystalBox/>
+class CrystalGrid extends Component {
+  
+   
+  render(){
     
-    </Grid>
-    
-    </div>
-  )
+    return (
+      
+      <Grid><p>{this.props.name}</p>
+      <CrystalBox/>
+          
+      
+      </Grid>
+      
+      
+    )
+  }
 }
 
 export default CrystalGrid
